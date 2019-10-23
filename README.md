@@ -8,4 +8,4 @@
   
   ## Descrição
   
-  O projeto foi feito com a metodologia Scrum, todo em Python com a técnica de mineração de dados web scraping para coletar as notícias do site do Instituto Federal de Brasília campus Brasília e colocado em uma biblioteca JSON para a organização das notícias, utilizando a API Telebot foi criado um bot que envia as notícias formatadas para o canal do Telegram automaticamente.
+  O projeto foi feito com a metodologia Scrum, todo em Python com a técnica de mineração de dados web scraping para coletar as notícias do site do Instituto Federal de Brasília, na página de notícias do campus Brasília e colocado em uma biblioteca JSON para a organização das notícias, utilizando a API Telebot foi criado um bot que envia as notícias formatadas para o canal do Telegram automaticamente.
