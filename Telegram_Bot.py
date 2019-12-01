@@ -1,11 +1,11 @@
-import telebot
+import telepot
 import json
 import os.path
 from time import sleep
 from datetime import datetime
 
 def rodar(arquivo_noticias, arquivo_tmp):
-	bot = telebot.TeleBot("830508513:AAFzKIgoWaKkPoDMig3Fa_tCBFKGIGxQogY")
+	bot = telepot.Bot("830508513:AAFzKIgoWaKkPoDMig3Fa_tCBFKGIGxQogY")
 
 	a = open(arquivo_noticias, 'r')
 	noticias = json.loads(a.read())
@@ -45,10 +45,10 @@ def rodar(arquivo_noticias, arquivo_tmp):
 			data_hora = lista_data[i]
 
 			if data_hora > ultima_data:
-				bot.send_message(chat_id, 
+				bot.sendMessage(chat_id, 
 												mensagem,
 												parse_mode = "markdown")
-				bot.send_message(chanel_id, 
+				bot.sendMessage(chanel_id, 
 												mensagem, 
 												parse_mode = "markdown")			
 			sleep(1)
@@ -58,10 +58,10 @@ def rodar(arquivo_noticias, arquivo_tmp):
 			noticia = (noticias[i][lista_chaves[i]])
 			mensagem ="_{0}_ \n*{1}* \n\n{2}\n\n [.]({3}).\n {4}\n".format(lista_chaves[i],noticia[0],noticia[1],noticia[2],noticia[3])
 			
-			bot.send_message(chat_id, 
+			bot.sendMessage(chat_id, 
 											mensagem,
 											parse_mode = "markdown")
-			bot.send_message(chanel_id, 
+			bot.sendMessage(chanel_id, 
 											mensagem, 
 											parse_mode = "markdown")
 		sleep(1)
